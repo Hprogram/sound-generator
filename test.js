@@ -1,5 +1,8 @@
+// 배열 형태로 sinewave를 그려줌
 var tone = require("tonegenerator");
+// sinewave를 음원화 시켜줌
 var header = require("waveheader");
+// 파일로 저장.
 var fs = require("fs");
 
 var file = fs.createWriteStream("16bit-example6.wav");
@@ -7,7 +10,7 @@ var file = fs.createWriteStream("16bit-example6.wav");
 var samples = tone({
   freq: 208,
   lengthInSecs: 2,
-  volume: (tone.MAX_16 / 100) * 50,
+  volume: (tone.MAX_16 / 100) * 50, // 볼륨 조절(최대치에서 비율로 내리는 식)
 });
 
 file.write(
