@@ -14,7 +14,7 @@ var samples = tone({
 });
 
 file.write(
-  header(samples.length * 2, {
+  header(samples.length * 2, {  // 파일의 길이와 비트수 결정
     bitDepth: 16,
   })
 );
